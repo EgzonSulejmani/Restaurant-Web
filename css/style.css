@@ -1,0 +1,1880 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Fraunces:wght@200&display=swap");
+@import url("{% static 'extrasmall.css')s");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fcf5ef;
+}
+.carousel {
+  height: 100vh;
+}
+#carousel-item1 > #slide1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(../img/hagnau.jpeg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
+}
+#carousel-item2 > #slide2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(../img/steghaus5.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
+}
+#carousel-item3 > #slide3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(../img/steghaus3.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#carouselExampleIndicators {
+  height: 90vh;
+}
+
+.carousel-inner {
+  height: 100vh;
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: 6s;
+  z-index: 10000;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate 4s linear infinite;
+  z-index: 1000;
+}
+.loader img {
+  width: auto;
+  height: auto;
+}
+
+.preloader.complete {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.carousel {
+  height: 100vh;
+}
+
+#carouselExampleIndicators {
+  height: 90vh;
+}
+
+.carousel-inner {
+  height: 100vh;
+}
+
+/* nav */
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+}
+.social-media {
+  padding-left: 15px;
+  letter-spacing: 10px;
+}
+.social-media a:hover {
+  color: blue;
+}
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: background-color 0.5s ease;
+  z-index: 10;
+}
+
+
+.social-media {
+  padding-left: 15px;
+  letter-spacing: 10px;
+  display: inline-flex;
+}
+.social-media a:hover {
+  color: blue;
+}
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.container {
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+nav {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.126);
+  transition: height 0.5s ease;
+}
+.logo {
+  float: left;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.links {
+  float: right;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.links li {
+  list-style: none;
+  display: inline-flex;
+  margin-left: auto;
+}
+.links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.links a:hover {
+  color: orange;
+}
+#nav-cta {
+  display: inline-block;
+  background-color: rgb(191, 86, 86);
+  color: #fcfcfc;
+  padding: 5px 20px;
+  border-radius: 15px;
+  transition: background-color 0.5s ease;
+  text-decoration: none;
+}
+.nav-link {
+  margin: 0 2rem;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(254, 254, 254);
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+.scrolling-active {
+  background-color: rgba(119, 118, 118, 0.87);
+  box-shadow: 0 3px 10px rgba(96, 50, 50, 0.1);
+}
+
+.scrolling-active nav {
+  height: 70px;
+}
+
+.scrolling-active nav a {
+  color: #fcfafa;
+}
+.scrolling-active .icon-burger .line {
+  width: 26px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.scrolling-active .nav-link::after {
+  background-color: #313131;
+}
+
+.glyphicon {
+  font-size: 20px;
+  color: rgb(252, 109, 0);
+}
+.navbar-toggler {
+  border: none;
+}
+.bi-filter-right {
+  color: white;
+  text-decoration: bold;
+}
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+.icon-burger {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.icon-burger .line {
+  width: 26px;
+  height: 3px;
+  background-color: rgb(252, 109, 0);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.US {
+  width: 100%;
+  height: 70vh;
+  display: inline-flex;
+  justify-content: center;
+  padding-top: 7%;
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+}
+.foto img {
+  padding-left: 10px;
+}
+.title {
+  padding-left: 20px;
+}
+
+      
+.text {
+  display: inline-block;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+  font-weight: 50px;
+  font-size: 16px;
+}
+
+.Menu {
+  margin-top: 15%;
+  height: 10vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(../img/3.jpg);
+  padding-right: 20%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu {
+  width: 100%;
+  height: 50vh;
+}
+.menu-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 22%;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(255, 0, 0, 0.582);
+}
+.see-more {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 50px;
+  background-color: rgb(191, 86, 86);
+  margin-left: 35%;
+  border-radius: 5px;
+}
+.see-more a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.see-more:hover {
+  background-color: red;
+}
+.tomates-pic {
+  width: 90%;
+  height: 40vh;
+  background-color: #fcf5ef;
+}
+.spaghetti-pic {
+  width: 100%;
+  height: 40vh;
+  margin-left: 15px;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #fcf5ef;
+}
+.Wine {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(../img/wine-background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 120vh;
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+  padding-top: 7%;
+}
+.ForWine {
+  display: inline-flex;
+  justify-content: center;
+  margin-left: 20%;
+}
+.tekst {
+  display: inline-block;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 20px;
+  font-weight: 50px;
+  font-size: 16px;
+  color: white;
+}
+#wine {
+  color: red;
+  font-size: 50px;
+  height: 40px;
+  font-weight: bold;
+}
+.see-wine {
+  border: none;
+  width: 50%;
+  height: 50px;
+  background-color: rgb(191, 86, 86);
+  border-radius: 5px;
+}
+.see-wine a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.see-wine:hover {
+  background-color: red;
+}
+.gallery {
+  margin: 3% 0 0 18%;
+  display: block;
+}
+.gallery img {
+  width: 230px;
+  height: 20vh;
+  padding: 5px;
+  filter: grayscale(70%);
+  transition: 1s;
+}
+.gallery img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+.photo img {
+  padding-left: 10px;
+}
+.Opening {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Open {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(../img/wine-background.jpg);
+  width: 80%;
+  height: 70vh;
+  border-radius: 20px;
+  margin-top: 5%;
+  color: white;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+.Open-hours h1 {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 60px;
+  max-width: 750px;
+  position: relative;
+}
+.Open-hours h1::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.Open-hours h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.Open-hours p {
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Aclonica", sans-serif;
+}
+.Time {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Time h1,
+h2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  /* transform: translateY(-50%);
+  right: 1400px; */
+}
+.Time p {
+  color: white;
+  font-size: 18px;
+}
+
+.Reservations {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Reservation {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+  url(../img/bcg.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 80%;
+  height: 85vh;
+  border-radius: 20px;
+  color: white;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+#form{
+  
+  width: 100%;
+  height: 80vh;
+}
+.Reservations h1 {
+  color: red;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Aclonica", sans-serif;
+}
+.Reservations p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.footer {
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(../img/wine-background.jpg);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-top: 2%;
+  margin-top: 5%;
+}
+.footer h1 {
+  color: red;
+  font-size: 50px;
+  margin-top: 7%;
+  font-family: "Aclonica", sans-serif;
+}
+.footer p {
+  font-size: 20px;
+  font-weight: bold;
+}
+#btn-onscroll {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(218, 184, 36, 0.623);
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+#btn-onscroll i {
+  border: none;
+  color: rgb(252, 252, 252);
+  font-size: 40px;
+  background: none;
+}
+
+#btn-onscroll:hover {
+  background-color: rgba(236, 93, 11, 0.623);
+}
+.adress {
+  font-size: 30px;
+  width: 60%;
+}
+.adress a {
+  text-decoration-line: none;
+  color: rgba(218, 184, 36, 0.623);
+}
+#footer-adress {
+  height: 45vh;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.126);
+}
+.map {
+  width: 30%;
+}
+.footer .fa {
+  width: 50px;
+  height: 50px;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 1px solid #dedede;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .fa:hover {
+  color: white;
+  background-color: rgba(173, 4, 4, 0.849);
+}
+
+input {
+  display: block;
+  justify-content: center;
+  width: 25%;
+  height: 60px;
+  border-radius: 5px;
+  border: 3px solid rgba(202, 196, 137, 0.836);
+  outline: none;
+  margin-left: 37%;
+  font-size: 30px;
+  background: transparent;
+}
+label {
+  margin-left: 37%;
+  color: #f36700;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 20px;
+  font-weight: bold;
+}
+input::placeholder{
+  color: wheat;
+}
+.main-button {
+  margin-top: 20px;
+	display:inline-block;
+	padding:15px 30px;
+	border:none;
+	border-radius:40px;
+	background-color:#f36700;
+	color:#FFF;
+	text-transform: uppercase;
+	font-weight: 700;
+	-webkit-transition:0.2s opacity;
+	transition:0.2s opacity;
+}
+.main-button:hover {
+	color:#FFF;
+	opacity:0.8;
+}
+
+
+.not-visible {
+  display: none;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: linear-gradient(to top, #ff0000, #585858);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0%,
+  100% {
+    filter: rotate(0deg);
+  }
+  50% {
+    filter: rotate(360deg);
+  }
+}
+
+#progressbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #4d1414, #181818);
+  filter: blur(10px);
+}
+#progressbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #571616, #3b3a3a);
+  filter: blur(30px);
+}
+
+/* Slider Visit at Home */
+
+.Visit {
+  width: 100%;
+  height: 80vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+}
+.text-visit {
+  width: 110%;
+  height: 80vh;
+  background: #fff;
+  padding: 15%;
+}
+.text-visit h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: rgba(124, 84, 32, 0.5);
+}
+.txt {
+  font-weight: 50px;
+  font-size: 16px;
+  color: rgba(124, 84, 32, 0.5);
+}
+
+.next-button {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background: #fff;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0px solid rgba(255, 255, 255, 0.5);
+  border-left: 0px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
+  /* z-index: 100; */
+}
+.button2 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(124, 84, 32, 0.5);
+  backdrop-filter: blur(25px);
+  /* z-index: 110; */
+}
+
+.button2 h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(124, 84, 32, 0.5);
+  background: none;
+}
+.swiper-container {
+  height: 80vh;
+  width: 85%;
+  z-index: -100 !important;
+}
+
+.swiper-button-next {
+  background-color: none;
+}
+.swiper-wrapper img {
+  height: 80vh;
+  display: flex;
+  justify-content: flex-start;
+}
+#Next {
+  right: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* z-index: 2000; */
+  color: rgb(255, 255, 255) !important;
+}
+
+
+/* Responsive*/
+@media (max-width: 992px) {
+  #carousel-item1 > #slide1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../img/backgr.jpg);
+    height: 100vh;
+    background-position: center;
+    
+    overflow-x: hidden;
+    position: relative;
+  }
+  #carousel-item2 > #slide2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../img/carousel2.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+  }
+  #carousel-item3 > #slide3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../img/carousel3.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .scrolling-active nav {
+    height: 13vh;
+  }
+  .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+  .links {
+    float: none;
+    position: fixed;
+    z-index: 3000 !important;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  .links li {
+    margin-left: 0;
+  }
+  .links a {
+    font-size: 16px !important;
+  }
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+  .icon-burger {
+    display: block;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(8px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-225deg);
+  }
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    left: 0;
+    width: 300px;
+  }
+  .carousel {
+    height: 60vh;
+  }
+  .carousel-inner {
+    height: 60vh;
+  }
+  #carouselExampleIndicators {
+    height: 60vh;
+  }
+  .US {
+    height: 50vh;
+  }
+  .foto {
+    margin-top: 10px;
+  }
+  .foto img {
+    width: 220px;
+  }
+  .row {
+    height: 35vh;
+  }
+  .middle {
+    font-size: 14px;
+    height: 33vh;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .text {
+    font-size: 14px;
+    height: 33vh;
+  }
+  .tomates-pic {
+    height: 20vh;
+  }
+  .spaghetti-pic {
+    height: 20vh;
+  }
+  .menu {
+    background-size: 30px;
+    height: 35vh;
+  }
+  .menu-title {
+    font-size: 22px;
+  }
+  .see-more {
+    width: 100%;
+    font-size: 14px;
+    margin: 0;
+  }
+  .photo img {
+    width: 200px;
+    display: inline !important;
+  }
+  .titulli {
+    font-size: 16px;
+  }
+  .tekst {
+    font-size: 14px;
+    height: 20vh;
+  }
+  #wine {
+    height: 20px;
+    font-size: 30px;
+  }
+  .see-wine {
+    height: 30px;
+  }
+  .see-wine a {
+    font-size: 14px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 30px;
+    width: 80%;
+    margin-top: 1%;
+  }
+  .gallery br {
+    display: none;
+  }
+  .gallery img {
+    width: 180px;
+    height: 12vh;
+  }
+  .ForWine {
+    height: 33vh;
+    margin-left: 10%;
+  }
+  .Wine {
+    height: 69vh;
+    background-size: 150%;
+  }
+  .Visit {
+    height: 61vh;
+    margin-top: 5%;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 55vh;
+    z-index: -100 !important;
+  }
+  .swiper-wrapper {
+    height: 20vh;
+  }
+  .swiper-wrapper img {
+    height: 55vh;
+  }
+
+  .text-visit {
+    font-size: 14px;
+    height: 55vh;
+    padding: 5%;
+    width: 100%;
+  }
+  .title-visit h1 {
+    font-size: 30px;
+  }
+  .txt {
+    font-size: 13px;
+    height: 40vh;
+    width: 92%;
+  }
+  .next-button {
+    margin-top: 200px;
+    margin-left: 30px;
+  }
+  .button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  .Opening {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .Open {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../img/wine-background.jpg);
+    background-size: 900px;
+    width: 80%;
+    height: 40vh;
+    border-radius: 20px;
+    margin-top: 5%;
+    color: white;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+  .Open-hours h1 {
+    margin: 30px auto;
+    text-align: center;
+    font-size: 30px;
+    max-width: 550px;
+    position: relative;
+    margin-bottom: 0px;
+  }
+  .Open-hours h1::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+  .Open-hours h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  .Open-hours p {
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Aclonica", sans-serif;
+  }
+  .Time {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 25vh;
+  }
+  .Time br {
+    display: none;
+  }
+
+  .Time h1,
+  h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    /* transform: translateY(-50%);
+    right: 1400px; */
+  }
+  .Time p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .footer {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../img/wine-background.jpg);
+    background-size: 900px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 2%;
+    margin-top: 5%;
+  }
+  .footer h1 {
+    color: red;
+    font-size: 30px;
+    margin-top: 7%;
+    font-family: "Aclonica", sans-serif;
+  }
+  .footer p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #btn-onscroll {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    /* Place the button at the bottom of the page */
+    /* right: 30px;  */
+    z-index: 999; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgba(218, 184, 36, 0.623);
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  #btn-onscroll i {
+    border: none;
+    color: rgb(252, 252, 252);
+    font-size: 20px;
+    background: none;
+  }
+
+  #btn-onscroll:hover {
+    background-color: rgba(236, 93, 11, 0.623);
+  }
+  .adress {
+    font-size: 30px;
+    width: 80%;
+  }
+  #footer-adress {
+    width: 100%;
+  }
+  .adress a {
+    text-decoration-line: none;
+    color: rgba(218, 184, 36, 0.623);
+  }
+  #footer-adress {
+    height: 45vh;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.126);
+  }
+  .map {
+    width: 30%;
+  }
+  .map iframe {
+    width: 450px;
+    height: 300px;
+    margin-top: 30px;
+  }
+  .footer .fa {
+    width: 40px;
+    height: 40px;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 1px solid #dedede;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  .footer .fa:hover {
+    color: white;
+    background-color: rgba(173, 4, 4, 0.849);
+  }
+}
+@media (max-width: 768px) {
+  .scrolling-active nav {
+    height: 13.5vh;
+  }
+  /* .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  } */
+  .links {
+    float: none;
+    position: fixed;
+    z-index: 9999999999;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  .links a {
+    font-size: 16px !important;
+  }
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+  .icon-burger {
+    display: block;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(8px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-225deg);
+  }
+  .carousel {
+    height: 50vh;
+  }
+  .carousel-inner {
+    height: 50vh;
+  }
+  #carouselExampleIndicators {
+    height: 50vh;
+  }
+  .US {
+    height: 45vh;
+  }
+  .foto {
+    margin-top: 10px;
+  }
+  .foto img {
+    width: 170px;
+    height: 27vh;
+  }
+  .row {
+    height: 30vh;
+  }
+  .middle {
+    font-size: 14px;
+    height: 33vh;
+  }
+  .Menu {
+    height: 8vh;
+    width: 100%;
+    padding-right: 11%;
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+  .text {
+    font-size: 12px;
+    height: 27vh;
+  }
+  .tomates-pic {
+    height: 20vh;
+  }
+  .spaghetti-pic {
+    height: 20vh;
+  }
+  .menu {
+    height: 30vh;
+  }
+  .menu-title {
+    font-size: 18px;
+  }
+  .see-more {
+    width: 100%;
+    height: 4vh;
+    margin: 0;
+  }
+  .see-more a {
+    font-size: 14px;
+  }
+  .photo img {
+    width: 160px;
+    height: 25vh;
+    display: inline !important;
+  }
+  .titulli {
+    font-size: 14px;
+  }
+  .tekst {
+    font-size: 12px;
+    height: 20vh;
+  }
+  #wine {
+    height: 20px;
+    font-size: 30px;
+  }
+  .see-wine {
+    height: 30px;
+  }
+  .see-wine a {
+    font-size: 14px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 5px;
+    width: 80%;
+  }
+  .gallery br {
+    display: none;
+  }
+  .gallery img {
+    width: 140px;
+    height: 12vh;
+  }
+
+  .ForWine {
+    height: 33vh;
+    margin-left: 5%;
+  }
+  .Wine {
+    height: 70vh;
+    background-size: 155%;
+  }
+  .footer {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../img/wine-background.jpg);
+    background-size: 700px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 5%;
+  }
+  .footer h1 {
+    color: red;
+    font-size: 20px;
+    margin-top: 1%;
+    font-family: "Aclonica", sans-serif;
+  }
+  .footer p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .footer .fa {
+    width: 35px;
+    height: 35px;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 1px solid #dedede;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14 px;
+  }
+  .map {
+    width: 100%;
+  }
+  #footer-adress {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 55vh;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.126);
+  }
+  .adress {
+    font-size: 10px;
+    width: 80%;
+  }
+  .map iframe {
+    width: 100%;
+    height: 250px;
+    margin-top: 5px;
+  }
+  .Opening {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .Open {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../img/wine-background.jpg);
+    background-size: 700px;
+    width: 90%;
+    height: 40vh;
+    border-radius: 20px;
+    margin-top: 1%;
+    color: white;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+  .Open-hours h1 {
+    margin: 30px auto;
+    text-align: center;
+    font-size: 25px;
+    max-width: 550px;
+    position: relative;
+    margin-bottom: 0px;
+  }
+  .Open-hours h1::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+  .Open-hours h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  .Open-hours p {
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Aclonica", sans-serif;
+  }
+  .Time {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 25vh;
+  }
+  .Time br {
+    display: none;
+  }
+
+  .Time h1,
+  h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    /* transform: translateY(-50%);
+    right: 1400px; */
+  }
+  .Time p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .Reservations {
+    margin-top: 20%;
+  }
+  /* .text-visit {
+    font-size: 14px;
+    height: 55vh;
+    padding: 5%;
+    width: 100%;
+  }
+  .title-visit h1 {
+    font-size: 30px;
+  }
+  .txt {
+    font-size: 13px;
+    height: 30vh;
+    width: 92%;
+  }
+  .next-button {
+    margin-top: 150px;
+    margin-left: 30px;
+  }
+  .button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color 0.5s ease;
+    z-index: 10;
+  }
+  .container {
+    width: 80%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+  .logo img {
+    background-size: 50px;
+  }
+  .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  .links li {
+    margin-left: 0;
+  }
+  .links a {
+    font-size: 20px;
+  }
+  nav {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.126);
+    transition: height 0.5s ease;
+  }
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+  .icon-burger {
+    display: block;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(8px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-225deg);
+  }
+  .navigation {
+    width: 80%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle.active {
+    position: fixed;
+    z-index: 100000;
+    right: 0;
+    left: initial;
+  }
+  .toggle.active::before {
+    color: white;
+  }
+
+  .Open {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../img/wine-background.jpg);
+    background-size: 600px;
+    width: 95%;
+    height: 40vh;
+    border-radius: 20px;
+    margin-top: 1%;
+    color: white;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+  .Open-hours h1 {
+    margin: 30px auto;
+    text-align: center;
+    font-size: 25px;
+    max-width: 550px;
+    position: relative;
+    margin-bottom: 0px;
+  }
+  .Open-hours h1::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+  .Open-hours h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  .Time br {
+    visibility: hidden;
+  }
+  .footer {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../img/wine-background.jpg);
+    background-size: 600px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 5%;
+  }
+  .Time h1,
+  h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2px;
+    /* transform: translateY(-50%);
+        right: 1400px; */
+  }
+  .Time p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .map iframe {
+    width: 98%;
+    height: 32%;
+    margin-top: 5px;
+  }
+  .carousel {
+    width: 100%;
+    height: 30vh;
+  }
+  .carousel-inner {
+    width: 100%;
+    height: 30vh;
+  }
+  #carouselExampleIndicators {
+    height: 30vh;
+  }
+  .US {
+    height: 72vh;
+    display: grid;
+    grid-template-columns: (1, 1fr);
+  }
+  .foto {
+    margin-top: 10px;
+  }
+  .foto img {
+    width: 150px;
+    height: 25vh;
+  }
+  .row {
+    height: 30vh;
+  }
+  .middle {
+    font-size: 10px;
+    height: 33vh;
+  }
+  .Menu {
+    height: 5vh;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+  .text {
+    font-size: 12px;
+    height: 27vh;
+  }
+  .tomates-pic {
+    height: 15vh;
+  }
+  .spaghetti-pic {
+    height: 15vh;
+  }
+  .menu {
+    height: 20vh;
+  }
+  .menu-title {
+    font-size: 12px;
+    text-align: center;
+  }
+  .see-more {
+    width: 100%;
+    height: 4vh;
+    margin: 0;
+  }
+  .see-more a {
+    font-size: 14px;
+  }
+  .photo img {
+    width: 170px;
+    height: 25vh;
+    display: inline !important;
+    margin-top: 40px;
+  }
+  .titulli {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .tekst {
+    font-size: 12px;
+    height: 20vh;
+    margin-left: 10px;
+  }
+  #wine {
+    height: 20px;
+    font-size: 30px;
+  }
+  .see-wine {
+    height: 30px;
+    margin-left: 10px;
+  }
+  .see-wine a {
+    font-size: 14px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 5px;
+    width: 100%;
+  }
+  .gallery br {
+    display: none;
+  }
+  .gallery img {
+    width: 120px;
+    height: 12vh;
+  }
+  #the-last-pic {
+    display: none;
+  }
+
+  .ForWine {
+    height: 65vh;
+    margin-left: 1%;
+    display: grid;
+    grid-template-columns: (1, 1fr);
+  }
+  .Wine {
+    height: 110vh;
+    background-size: 380%;
+  }
+  .Visit {
+    width: 100%;
+    height: 111vh;
+    /* display: inline-flex;
+        justify-content: center;
+        align-items: center; */
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+  }
+  .text-visit {
+    margin-left: 5%;
+    width: 90%;
+    height: 55vh;
+    background: #fff;
+  }
+  .text-visit h1 {
+    font-size: 30px;
+    font-weight: 300;
+    color: rgba(124, 84, 32, 0.5);
+  }
+  .txt {
+    font-weight: 30px;
+    height: 30vh;
+    font-size: 12px;
+    color: rgba(124, 84, 32, 0.5);
+  }
+
+  .next-button {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: #fff;
+    margin-top: 110%;
+    margin-left: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0px solid rgba(255, 255, 255, 0.5);
+    border-left: 0px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(25px);
+    /* z-index: 100; */
+  }
+  .button2 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    margin-right: 4px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(124, 84, 32, 0.5);
+    backdrop-filter: blur(25px);
+    /* z-index: 110; */
+  }
+
+  .button2 h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(124, 84, 32, 0.5);
+    background: none;
+  }
+  .swiper-container {
+    height: 50vh;
+    width: 90%;
+    z-index: -100 !important;
+  }
+
+  .swiper-button-next {
+    background-color: none;
+  }
+  .swiper-wrapper img {
+    height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+  }
+  #Next {
+    right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 2000; */
+    color: rgb(255, 255, 255) !important;
+  }
+}
+
+
+/* Home */
+
+
+

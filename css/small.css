@@ -1,0 +1,357 @@
+@media (max-width: 600px) {
+  .scrolling-active nav {
+    height: 11vh;
+  }
+  /* .logo {
+        float: none;
+        width: auto;
+        justify-content: center;
+      } */
+  .links {
+    float: none;
+    position: fixed;
+    z-index: 9999999999;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  .links li {
+    margin-left: 0;
+  }
+  .links a {
+    font-size: 16px !important;
+  }
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+  .icon-burger {
+    display: block;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(8px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-225deg);
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle.active {
+    position: fixed;
+    z-index: 100000;
+    right: 0;
+    left: initial;
+  }
+  .toggle.active::before {
+    color: white;
+  }
+
+  .Open {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(./img/wine-background.jpg);
+    background-size: 600px;
+    width: 90%;
+    height: 40vh;
+    border-radius: 20px;
+    margin-top: 1%;
+    color: white;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+  .Open-hours h1 {
+    margin: 30px auto;
+    text-align: center;
+    font-size: 25px;
+    max-width: 550px;
+    position: relative;
+    margin-bottom: 0px;
+  }
+  .Open-hours h1::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+  .Open-hours h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  .Time br {
+    visibility: hidden;
+  }
+  .footer {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(./img/wine-background.jpg);
+    background-size: 600px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 5%;
+  }
+  .Time h1,
+  h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2px;
+    /* transform: translateY(-50%);
+        right: 1400px; */
+  }
+  .Time p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .map iframe {
+    width: 98%;
+    height: 32%;
+    margin-top: 5px;
+  }
+  .carousel {
+    width: 100%;
+    height: 30vh;
+  }
+  .carousel-inner {
+    width: 100%;
+    height: 30vh;
+  }
+  #carouselExampleIndicators {
+    height: 30vh;
+  }
+  .US {
+    height: 72vh;
+    display: grid;
+    grid-template-columns: (1, 1fr);
+  }
+  .foto {
+    margin-top: 10px;
+  }
+  .foto img {
+    width: 170px;
+    height: 25vh;
+  }
+  .row {
+    height: 30vh;
+  }
+  .middle {
+    font-size: 10px;
+    height: 33vh;
+  }
+  .Menu {
+    height: 5vh;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+  .text {
+    font-size: 12px;
+    height: 27vh;
+  }
+  .tomates-pic {
+    height: 15vh;
+  }
+  .spaghetti-pic {
+    height: 15vh;
+  }
+  .menu {
+    height: 20vh;
+  }
+  .menu-title {
+    font-size: 12px;
+    text-align: center;
+  }
+  .see-more {
+    width: 100%;
+    height: 4vh;
+    margin: 0;
+  }
+  .see-more a {
+    font-size: 14px;
+  }
+  .photo img {
+    width: 170px;
+    height: 25vh;
+    display: inline !important;
+    margin-top: 40px;
+  }
+  .titulli {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .tekst {
+    font-size: 12px;
+    height: 20vh;
+    margin-left: 10px;
+  }
+  #wine {
+    height: 20px;
+    font-size: 30px;
+  }
+  .see-wine {
+    height: 30px;
+    margin-left: 10px;
+  }
+  .see-wine a {
+    font-size: 14px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 15px;
+    width: 100%;
+  }
+  .gallery br {
+    display: none;
+  }
+  .gallery img {
+    width: 120px;
+    height: 12vh;
+  }
+  #the-last-pic {
+    display: none;
+  }
+
+  .ForWine {
+    height: 65vh;
+    margin-left: 1%;
+    display: grid;
+    grid-template-columns: (1, 1fr);
+  }
+  .Wine {
+    height: 110vh;
+    background-size: 360%;
+  }
+  .Visit {
+    width: 100%;
+    height: 111vh;
+    /* display: inline-flex;
+        justify-content: center;
+        align-items: center; */
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+  }
+  .text-visit {
+    margin-left: 5%;
+    width: 90%;
+    height: 55vh;
+    background: #fff;
+  }
+  .text-visit h1 {
+    font-size: 30px;
+    font-weight: 300;
+    color: rgba(124, 84, 32, 0.5);
+  }
+  .txt {
+    font-weight: 30px;
+    height: 30vh;
+    font-size: 12px;
+    color: rgba(124, 84, 32, 0.5);
+  }
+
+  .next-button {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: #fff;
+    margin-top: 600px;
+    margin-left: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0px solid rgba(255, 255, 255, 0.5);
+    border-left: 0px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(25px);
+    /* z-index: 100; */
+  }
+  .button2 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    margin-right: 4px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(124, 84, 32, 0.5);
+    backdrop-filter: blur(25px);
+    /* z-index: 110; */
+  }
+
+  .button2 h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(124, 84, 32, 0.5);
+    background: none;
+  }
+  .swiper-container {
+    height: 50vh;
+    width: 90%;
+    z-index: -100 !important;
+  }
+
+  .swiper-button-next {
+    background-color: none;
+  }
+  .swiper-wrapper img {
+    height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+  }
+  #Next {
+    right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 2000; */
+    color: rgb(255, 255, 255) !important;
+  }
+  /* .Reservations {
+        margin-top: 50%;
+      } */
+}
+
+
